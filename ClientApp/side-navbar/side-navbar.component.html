@@ -1,0 +1,109 @@
+<div [class.active]="tog" class="sidebar">
+  <div class="logo-content">
+    <div class="logo">
+      <div class="logo-name">
+        HalfDev
+      </div>
+    </div>
+    <i (click)="toggle()" class='bx bx-menu' id="menuBtn"></i>
+  </div>
+  <ul class="sidenav-list">
+    <!--<li>
+  <i class='bx bx-search'></i>
+  <input type="text" placeholder="Search..." />-->
+    <!--<span class="tool-tip">Dashboard</span>-->
+    <!--</li>-->
+    <li>
+      <a href="#">
+        <i class='bx bx-user'></i>
+        <span class="link-name">Profile</span>
+      </a>
+      <span class="tool-tip">Profile</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-folder-plus'></i>
+        <span class="link-name">New post</span>
+      </a>
+      <span class="tool-tip">New post</span>
+    </li>
+
+    <li>
+      <a href="#">
+        <i class='bx bx-time'></i>
+        <span class="link-name">Pending posts</span>
+      </a>
+      <span class="tool-tip">Pending posts</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bxs-book-content'></i>
+        <span class="link-name">My posts</span>
+      </a>
+      <span class="tool-tip">My posts</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-pie-chart-alt-2'></i>
+        <span class="link-name">Analytics</span>
+      </a>
+      <span class="tool-tip">Analytics</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bxs-user-detail'></i>
+        <span class="link-name">Manage roles</span>
+      </a>
+      <span class="tool-tip">Manage roles</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-heart'></i>
+        <span class="link-name">Read later</span>
+      </a>
+      <span class="tool-tip">Read later</span>
+    </li>
+    <!--<li>
+      <a href="#">
+        <i class='bx bx-cog'></i>
+        <span class="link-name">Settings</span>
+      </a>
+      <span class="tool-tip">Settings</span>
+    </li>-->
+    <li>
+      <a href="#">
+        <i class='bx bx-code-alt'></i>
+        <span class="link-name">Contribute</span>
+      </a>
+      <span class="tool-tip">Contribute</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-log-out'></i>
+        <span class="link-name">Sign out</span>
+      </a>
+      <span class="tool-tip">Sign out</span>
+    </li>
+  </ul>
+  <div class="profile-content">
+    <div class="profile">
+      <div class="profile-details">
+        <!--<img src="profile.jpg" />-->
+        <div class="name-job">
+          <div class="name">
+            Boris Martinovic
+          </div>
+          <div class="job">
+            Contributor
+          </div>
+        </div>
+      </div>
+      <!--<i class='bx bx-log-out' id="log-out"></i>-->
+    </div>
+  </div>
+ </div>
+<div class="home-content">
+    <app-txt-editor></app-txt-editor>
+</div>
+
+

@@ -1,0 +1,228 @@
+<div class="explore-header-img"></div>
+<div class="search-container">
+  <div class="search-input">
+    <div class="left-search">
+      <i class="bx bx-search explore-search"></i>
+      <form class="search-input-form">
+        <label for="search" class="hidden-text-input">Search</label>
+        <input class="search-input-btn" placeholder="Search..." type="search" id="search" autocomplete="off" spellcheck="false" />
+      </form>
+    </div>
+    <div class="vertical-break"></div>
+    <div class="search-filter-btn">
+      <div class="search-btn" (click) ="toggleSort()">
+        <span>{{ sortPref | titlecase }}</span>
+        <!--<i class='bx bxs-down-arrow' [class.rotate-chevron]="sortChange"></i>-->
+        <i class='bx bxs-down-arrow' [class.rotate-chevron]="sortChange"></i>
+      </div>
+      <div class="sort-dropdown advance-drop" [class.sort-dropdown-toggle]="!sortChange">
+        <form #sortForm="ngForm">
+          <div class="pop-drop">
+            <div class="radio-group">
+              <label class="radio-btn-container">
+                <input (change)="changeSort($event)" (click)="toggleSort()" class="radio-btn-input" type="radio" value="title" [(ngModel)]="sortPref" name="sortPref" />
+                <span class="radio-btn-label">Title</span>
+              </label>
+              <label class="radio-btn-container">
+                <input (change)="changeSort($event)" (click)="toggleSort()" class="radio-btn-input" type="radio" value="tags" [(ngModel)]="sortPref" name="sortPref" />
+                <span class="radio-btn-label">Tags</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="explore-container">
+  <div class="post-side">
+    <h3>Recommended</h3>
+    <div class="trending-articles">
+      <ul>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Rails 5 Actioncable Real-Time Notifications - Part 3 Stream Notifications</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  August 22, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Best Wordpress Software Companies</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  June 18, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>How to Create Bootstrap Login Form with PHP Validation</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  November 8, 2020</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Top 5 Trending Programming languages</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  August 28, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h3>Trending articles</h3>
+    <div class="trending-articles">
+      <ul>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Rails 5 Actioncable Real-Time Notifications - Part 3 Stream Notifications</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  August 22, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Best Wordpress Software Companies</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  June 18, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>How to Create Bootstrap Login Form with PHP Validation</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  November 8, 2020</time>
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="article-url">
+              <h6>Top 5 Trending Programming languages</h6>
+              <span class="article-date">
+                <i class='bx bx-time-five'></i>
+                <time>  August 28, 2021</time>
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="explore-content">
+    <div class="search-result modifNext">
+      <ul>
+        <li>
+          <div class="article-slider">
+            <div class="slider-url">
+              <a>
+                <div class="slider-text">
+                  <h5>Rails 5 Actioncable Real-Time Notifications - Part 3 Stream Notifications</h5>
+                  <p class="article-text">Lorem ipusm lorem ipsum lorem ipsum Lorem ipusm lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+                </div>
+              </a>
+              <div class="tag-wrap">
+                <div class="tags-container">
+                  <a class="tag-link">C programming</a>
+                  <a class="tag-link">Algorithms</a>
+                  <a class="tag-link">Linked lists</a>
+                  <a class="tag-link">Binary trees</a>
+                  <a class="tag-link">Graphs</a>
+                </div>
+                <div class="read-more">
+                  <a>Read more</a>
+                  <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                </div>
+                <!--<a class="read-more">Read more <i class='bx bx-right-arrow-circle' style='color:#ffffff'></i></a>-->
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-slider">
+            <div class="slider-url">
+              <a>
+                <div class="slider-text">
+                  <h5>Rails 5 Actioncable Real-Time Notifications - Part 3 Stream Notifications</h5>
+                  <p class="article-text">Lorem ipusm lorem ipsum lorem ipsum Lorem ipusm lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+                </div>
+              </a>
+              <div class="tag-wrap">
+                <div class="tags-container">
+                  <a class="tag-link">C programming</a>
+                  <a class="tag-link">Algorithms</a>
+                  <a class="tag-link">Linked lists</a>
+                </div>
+                <div class="read-more">
+                  <a>Read more</a>
+                  <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                </div>
+                <!--<a class="read-more">Read more <i class='bx bx-right-arrow-circle' style='color:#ffffff'></i></a>-->
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-slider">
+            <div class="slider-url">
+              <a>
+                <div class="slider-text">
+                  <h5>Rails 5 Actioncable Real-Time Notifications - Part 3 Stream Notifications</h5>
+                  <p class="article-text">Lorem ipusm lorem ipsum lorem ipsum Lorem ipusm lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+                </div>
+              </a>
+              <div class="tag-wrap">
+                <div class="tags-container">
+                  <a class="tag-link">C programming</a>
+                  <a class="tag-link">Algorithms</a>
+                  <a class="tag-link">Linked lists</a>
+                </div>
+                <div class="read-more">
+                  <a>Read more</a>
+                  <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                </div>
+                <!--<a class="read-more">Read more <i class='bx bx-right-arrow-circle' style='color:#ffffff'></i></a>-->
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="pagination">
+      <a class="prev-btn"><i class='bx bx-left-arrow-alt next-arrow'></i> Prev</a>
+      <a>2</a>
+      <a>3</a>
+      <a class="current">4</a>
+      <a>5</a>
+      <a>6</a>
+      <a class="prev-btn">Next <i class='bx bx-right-arrow-alt next-arrow'></i></a>
+    </div>
+  </div>
+</div>
+

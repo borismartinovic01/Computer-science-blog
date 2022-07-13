@@ -1,0 +1,28 @@
+<div class="code-header">
+  <ul class="code-tabs">
+    <li class="lang-tab" *ngFor="let menuList of menuLists" [ngClass]="{'lang-active':selectedList === menuList}" (click)="openMenuList(menuList)">
+      <a class="language">{{menuList}}</a>
+    </li>
+    <li #copyBtn class="lang-tab copy-btn" ngxClipboard [cbContent]="activeCode" (cbOnSuccess)="isCopied = true" (click)="changeIcon()">
+      <a class="language copy-front"><i class='bx bx-copy'></i> Copy</a>
+    </li>
+    <li #copySuccess class="lang-tab copy-success">
+      <a class="language copy-front"><i class='bx bx-check-circle'></i> copied</a>
+    </li>
+  </ul>
+</div>
+<ng-container *ngIf="selectedList === 'CSS'">
+  <pre><code [highlight]="codeCSS" [lineNumbers]="false" [languages]="['css']"></code></pre>
+</ng-container>
+<ng-container *ngIf="selectedList === 'C++'">
+  <pre><code [highlight]="codeCplus" [lineNumbers]="false" [languages]="['cpp']"></code></pre>
+</ng-container>
+<ng-container *ngIf="selectedList === 'Python'">
+  <pre><code [highlight]="codePython" [lineNumbers]="false" [languages]="['python']"></code></pre>
+</ng-container>
+
+
+<!--sa ovim da prepozanje jezik-->
+<!--<ng-container *ngIf="selectedList === 'C++'">
+  <pre><code [highlight]="codeCplus" (highlighted)="onHighlight($event)" [lineNumbers]="false" [languages]="['cpp']"></code></pre>
+</ng-container>-->

@@ -1,0 +1,101 @@
+<header [class.header-fixed] = "toggleMenu" class="header">
+  <a href="#" class="header-logo">HalfDev</a>
+  <!--<i (click) = "toggle()" class='bx bx-menu header-toggle' id="nav-toggle"></i>-->
+  <div (click) = "toggle()" class="header-toggle">
+    <span [class.activeDot1] ="toggleMenu" class="menu-dot-toggle dot1"></span>
+    <span [class.activeDot2] ="toggleMenu" class="menu-dot-toggle dot2"></span>
+    <span [class.activeDot3] ="toggleMenu" class="menu-dot-toggle dot3"></span>
+    <span [class.activeDot4] ="toggleMenu" class="menu-dot-toggle dot4"></span>
+    <span [class.activeDot5] ="toggleMenu" class="menu-dot-toggle dot5"></span>
+    <span [class.activeDot6] ="toggleMenu" class="menu-dot-toggle dot6"></span>
+    <span [class.activeDot7] ="toggleMenu" class="menu-dot-toggle dot7"></span>
+    <span [class.activeDot8] ="toggleMenu" class="menu-dot-toggle dot8"></span>
+    <span [class.activeDot9] ="toggleMenu" class="menu-dot-toggle dot9"></span>
+  </div>
+  <nav [class.show] ="toggleMenu" class="nav" id="nav-menu">
+    <div class="nav-content bd-grid">
+      <!--<i (click) ="toggle()" class='bx bx-x nav-close'></i>-->
+      <!--<div class="nav-perfil">-->
+      <!--<div class="nav-img">
+    <img src="../images/profile.jpeg"/>
+  </div>-->
+      <div class="brand-logo">
+        <img class="img-logo" src="../images/robot2.png" />
+        <span href="#" class="nav-name">HalfDev</span>
+        <!--<span class="nav-profession">Web developer</span>-->
+      </div>
+      <!--</div>-->
+      <div class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sign in</a>
+          </li>
+        </ul>
+      </div>
+      <div class="user" (click)="toggleDropdown()">
+        <div class="user-icon">
+          <i class='bx bxs-user'></i>
+        </div>
+        <i class='bx bxs-down-arrow chevron' [class.rotate-chevron]="toggleDrop"></i>
+      </div>
+      <div class="user-dropdown" [class.showDrop] ="toggleDrop">
+        <ul>
+          <li><a>Profile</a></li>
+          <li><a>Log out</a></li>
+        </ul>
+      </div>
+      <!--<div class="nav-social">-->
+      <!--<a href="#" class="nav-social-icon"><i class='bx bxl-github'></i></a>
+  <a href="#" class="nav-social-icon"><i class='bx bxl-linkedin'></i></a>
+  <a href="#" class="nav-social-icon"><i class='bx bxl-instagram'></i></a>-->
+      <!--<ul class="nav-list nav-account">
+      <li class="nav-item nav-acc">
+        <a href="#" class="btnTrans">Login</a>
+      </li>
+      <li class="nav-item nav-acc">
+        <a href="#" class="btnWhite">Signup</a>
+      </li>
+    </ul>
+  </div>-->
+    </div>
+  </nav>
+  <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">HalfDev</a>
+      <button class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+              aria-label="Toggle navigation"
+              [attr.aria-expanded]="isExpanded"
+              (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+           [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item"
+              [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/side-navbar']">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>-->
+</header>
